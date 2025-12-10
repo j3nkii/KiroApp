@@ -9,9 +9,9 @@ export class DatabaseService implements OnModuleInit, OnModuleDestroy {
     this.pool = new Pool({
       host: process.env.DB_HOST || 'localhost',
       port: parseInt(process.env.DB_PORT || '5432'),
-      database: process.env.DB_NAME || 'kiroapp',
-      user: process.env.DB_USER || 'postgres',
-      password: process.env.DB_PASSWORD || 'password',
+      database: process.env.DB_NAME || 'wom',
+      user: process.env.DB_USER || 'j3nkii',
+      password: process.env.DB_PASSWORD || '',
     });
 
     try {
