@@ -33,14 +33,17 @@ export interface WorkOrder {
 }
 
 // API configuration
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
 
 const apiClient = axios.create({
   baseURL: API_BASE_URL,
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json',
+    'Accept': 'application/json',
   },
+  // Handle CORS if needed
+  withCredentials: false,
 });
 
 // Error types
